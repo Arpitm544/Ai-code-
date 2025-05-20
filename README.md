@@ -8,11 +8,10 @@ CodePilot is an AI-powered platform that transforms your code review experience 
 
 ## 📌 Overview
 
-👨‍💻 **CodePilot** is your intelligent companion for reviewing code automatically. Whether you’re a student learning to code, a team building a college project, or a teacher reviewing assignments — CodePilot makes it fast, reliable, and educational.
+👨‍💻 **CodePilot** is your intelligent companion for reviewing code automatically. Whether you’re a student learning to code, or a teacher reviewing assignments — CodePilot makes it fast, reliable, and educational.
 
 ✨ **Core Highlights**:
 - AI-generated code feedback
-- GitHub/GitLab integration
 - Contextual explanations and health scoring
 - Secure, responsive, and user-friendly
 
@@ -44,14 +43,9 @@ Manual code reviews are:
 
 - ⚠️ **Real-time Notifications** for detected issues
 - 🌙 **Dark Mode** for late-night coding
-- 👤 **GitHub-linked Profiles** and preferences
 - 📌 **Bookmarks** to save helpful suggestions
-- 💬 **Comment System** for team discussion
 - 🔍 **Live Search** & **Filters** (Security, Performance, Best Practices)
 - 📊 **Code Health Score** (0–100 scale)
-- 📁 **Export Reports** as PDF
-- 💡 **Why Button** – Understand the reasoning behind every fix
-- 🤖 **GitHub Actions Integration** for CI/CD workflows
 - ✅ **Confirmation Dialogs** before deleting
 - 📄 **Code Checker** – Detects bugs, unsafe code, and anti-patterns
 - ⭐ **Rating & Feedback** system for user experience
@@ -78,10 +72,7 @@ Manual code reviews are:
 | Frontend     | React.js                         |
 | Backend      | Node.js + Express                |
 | Database     | MongoDB                          |
-| AI Pipeline  | Google Gemini API / CodeGeeX     |
-| CI/CD        | GitHub Actions                   |
-| Auth         | GitHub OAuth                     |
-| Linting      | ESLint                           |
+| AI Pipeline  | Google Gemini API / CodeGeeX     |               
 
 ---
 
@@ -98,9 +89,8 @@ Manual code reviews are:
 | Week | Milestone                          |
 |------|------------------------------------|
 | 1    | Core Setup (Editor + API Skeleton) |
-| 2    | AI Integration with Gemini         |
-| 3    | GitHub Actions & CI/CD             |
-| 4    | Final Polish, Health Score & Launch|
+| 2    | AI Integration with Gemini         |         |
+| 3    | Final Polish, Health Score & Launch|
 
 ---
 
@@ -109,7 +99,6 @@ Manual code reviews are:
 - 🎨 Frontend: Editor, dashboard, and feedback UI
 - 🔧 Backend: REST APIs, MongoDB schema
 - 🧠 AI Layer: Feedback engine (Gemini/CodeGeeX)
-- 🚀 CI/CD: PR review automation via GitHub Actions
 - 📚 Docs: User manual + API docs (Swagger)
 
 ---
@@ -122,5 +111,21 @@ We welcome contributions of all kinds! If you'd like to help:
 3. Submit a pull request 🛠️
 4. Follow the coding standards as set in the repository
 
----
+
+
+---<img width="1470" alt="Screenshot 2025-05-21 at 1 38 41 AM" src="https://github.com/user-attachments/assets/bcd0dbeb-3de8-416f-b800-7f96ec0c2de4" />
+
+<img width="1470" alt="Screenshot 2025-05-21 at 1 38 13 AM" src="https://github.com/user-attachments/assets/e2a7ccdf-6ae1-4e10-8257-8e0342709c46" />
+
+<img width="1470" alt="Screenshot 2025-05-21 at 1 41 09 AM" src="https://github.com/user-attachments/assets/8b07ed96-89b2-4956-90dd-dbfdf0092199" />
+
+<img width="1470" alt="Screenshot 2025-05-21 at 1 41 48 AM" src="https://github.com/user-attachments/assets/fbbaf748-5bbe-4a7b-966f-f05beae98184" />
+
+<img width="1470" alt="Screenshot 2025-05-21 at 1 43 04 AM" src="https://github.com/user-attachments/assets/94715ee9-167d-4095-bfa4-be53e16fb5e8" />
+
+<img width="1470" alt="Screenshot 2025-05-21 at 1 43 15 AM" src="https://github.com/user-attachments/assets/8f651dc9-1618-40dd-b9cb-0086f3d50431" />
+
+<img width="1470" alt="Screenshot 2025-05-21 at 1 43 47 AM" src="https://github.com/user-attachments/assets/72fe261c-19e4-4798-b9bd-75d3c8702ceb" />
+
+<img width="1470" alt="Screenshot 2025-05-21 at 1 44 04 AM" src="https://github.com/user-attachments/assets/c7718d32-3608-48cb-96c6-646b8faa4533" />
 
