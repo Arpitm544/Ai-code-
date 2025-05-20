@@ -40,7 +40,7 @@ const Login = () => {
       localStorage.setItem('email', data.email);
 
       // Redirect to code review page
-      navigate('/code-review');
+      navigate('/dashboard');
     } catch (err) {
       setError(err.response?.data?.message || err.message || 'An error occurred during login');
     } finally {

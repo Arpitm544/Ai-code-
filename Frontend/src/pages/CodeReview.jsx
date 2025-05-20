@@ -6,13 +6,19 @@ import rehypeHighlight from "rehype-highlight";
 import axios from 'axios';
 import "prismjs/themes/prism-tomorrow.css";
 import "highlight.js/styles/github-dark.css";
+import { useProjects } from '../context/ProjectContext';
+import { useLocation } from 'react-router-dom';
 
 const CodeReview = () => {
-  const [code, setCode] = useState(`function sum(){ 
+  const location = useLocation();
+  const project = location.state?.project;
+
+  const [code, setCode] = useState(project?.code || `function sum(){ 
   return 1+1
 }`);
-  const [review, setReview] = useState('');
+  const [review, setReview] = useState(project?.review || '');
   const [loading, setLoading] = useState(false);
+  const { addProject } = useProjects();
 
   useEffect(() => {
     prism.highlightAll();
@@ -28,6 +34,24 @@ const CodeReview = () => {
       setReview("Error fetching review. Please try again.");
     }
     setLoading(false);
+  };
+
+  const handleAddProject = () => {
+    const name = prompt('Enter project name:', project?.name || '');
+    if (!name) return;
+    const language = prompt('Enter language (e.g. JavaScript, Python, etc):', project?.language || 'JavaScript');
+    if (!language) return;
+    const healthScore = project?.healthScore || Math.floor(Math.random() * 41) + 60; // 60-100 random for demo
+    addProject({
+      id: Date.now(),
+      name,
+      language,
+      healthScore,
+      updated: 'just now',
+      code,
+      review
+    });
+    alert('Project added to dashboard!');
   };
 
   return (
@@ -50,12 +74,21 @@ const CodeReview = () => {
                 background: "transparent",
               }}
             />
+          </div>
+          <div className="button-group">
             <button 
               onClick={reviewCode}
               className="review-button"
               disabled={loading} 
             >
               {loading ? "Reviewing..." : "Review Code"}
+            </button>
+            <button 
+              onClick={handleAddProject}
+              className="add-project-button"
+              disabled={loading}
+            >
+              Add to My Projects
             </button>
           </div>
         </div>

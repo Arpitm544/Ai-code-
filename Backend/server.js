@@ -27,6 +27,10 @@ app.use('/ai', aiRoutes);
 const authRoutes = require('./src/routes/auth.routes');
 app.use('/api', authRoutes);
 
+// Mount Comment routes
+const commentRoutes = require('./src/routes/comment.routes');
+app.use('/api/comments', commentRoutes);
+
 // Error handling middleware
 app.use((err, req, res, next) => {
   console.error(err.stack);

@@ -15,6 +15,10 @@ import axios from 'axios'
 import './App.css'
 import { ThemeProvider } from './context/ThemeContext';
 import ThemeToggle from './components/ThemeToggle';
+import Dashboard from './pages/Dashboard';
+import { ProjectProvider } from './context/ProjectContext';
+import { BookmarkProvider } from './context/BookmarkContext';
+import Bookmarks from './pages/Bookmarks';
 
 const App = () => {
   const [count, setCount] = useState(0);
@@ -34,7 +38,7 @@ async function reviewCode(){
   setLoading(true); 
   setReview("");    
   try {
-    const response=await axios.post("http://localhost:3000/ai/get-review",{code});
+    const response=await axios.post("http://localhost:5000/ai/get-review",{code});
     setReview(response.data);
   } catch (err) {
     setReview("Error fetching review.");
@@ -44,27 +48,33 @@ async function reviewCode(){
 
   return (
     <ThemeProvider>
-      <Router>
-        <ThemeToggle />
-        <Routes>
-          {/* Redirect root to login */}
-          <Route path="/" element={<Navigate to="/login" replace />} />
-          
-          {/* Auth routes */}
-          <Route path="/login" element={<Login />} />
-          <Route path="/signup" element={<Signup />} />
-          
-          {/* Protected route */}
-          <Route 
-            path="/code-review" 
-            element={
-              <ProtectedRoute>
-                <CodeReview />
-              </ProtectedRoute>
-            } 
-          />
-        </Routes>
-      </Router>
+      <ProjectProvider>
+        <BookmarkProvider>
+          <Router>
+            <ThemeToggle />
+            <Routes>
+              {/* Redirect root to login */}
+              <Route path="/" element={<Navigate to="/login" replace />} />
+              
+              {/* Auth routes */}
+              <Route path="/login" element={<Login />} />
+              <Route path="/signup" element={<Signup />} />
+              
+              {/* Protected route */}
+              <Route 
+                path="/code-review" 
+                element={
+                  <ProtectedRoute>
+                    <CodeReview />
+                  </ProtectedRoute>
+                } 
+              />
+              <Route path="/dashboard" element={<Dashboard />} />
+              <Route path="/bookmarks" element={<Bookmarks />} />
+            </Routes>
+          </Router>
+        </BookmarkProvider>
+      </ProjectProvider>
     </ThemeProvider>
   );
 };
