@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: codepilot-backend
+    env: node
+    buildCommand: cd Backend && npm install
+    startCommand: cd Backend && npm start
+    envVars:
+      - key: PORT
+        value: 10000
+      - key: NODE_ENV
+        value: production 
